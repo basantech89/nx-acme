@@ -1,0 +1,51 @@
+{
+	"name": "@nx-acme/acme-plugin",
+	"version": "0.0.1",
+	"private": true,
+	"main": "./dist/index.js",
+	"module": "./dist/index.js",
+	"types": "./dist/index.d.ts",
+	"exports": {
+		"./package.json": "./package.json",
+		"./biome": "./biome.json",
+		".": {
+			"@nx-acme/source": "./src/index.ts",
+			"types": "./dist/index.d.ts",
+			"import": "./dist/index.js",
+			"default": "./dist/index.js"
+		}
+	},
+	"nx": {
+		"name": "acme-plugin",
+		"targets": {
+			"build": {
+				"executor": "@nx/js:tsc",
+				"outputs": [
+					"{options.outputPath}"
+				],
+				"options": {
+					"outputPath": "packages/nx-biome-plugin/dist",
+					"main": "packages/nx-biome-plugin/src/index.ts",
+					"tsConfig": "packages/nx-biome-plugin/tsconfig.lib.json",
+					"rootDir": "packages/nx-biome-plugin/src",
+					"generatePackageJson": false,
+					"assets": [
+						{
+							"input": "./packages/nx-biome-plugin/src",
+							"glob": "**/!(*.ts)",
+							"output": "."
+						},
+						{
+							"input": "./packages/nx-biome-plugin/src",
+							"glob": "**/*.d.ts",
+							"output": "."
+						}
+					]
+				}
+			}
+		}
+	},
+	"dependencies": {
+		"tslib": "^2.3.0"
+	}
+}
