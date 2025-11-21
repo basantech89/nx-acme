@@ -47,23 +47,23 @@
         "vitest": "^4.0.0",
       },
     },
-    "packages/acme-ui": {
-      "name": "@nx-acme/ui",
-      "version": "0.0.1",
-    },
     "packages/animal": {
       "name": "@nx-acme/animal",
+      "version": "0.0.1",
+      "dependencies": {
+        "@nx-acme/util": "workspace:*",
+        "tslib": "^2.3.0",
+      },
+    },
+    "packages/nx-biome-plugin": {
+      "name": "@nx-acme/acme-plugin",
       "version": "0.0.1",
       "dependencies": {
         "tslib": "^2.3.0",
       },
     },
-    "packages/lib1": {
-      "name": "@nx-acme/lib1",
-      "version": "0.0.1",
-    },
-    "packages/nx-biome-plugin": {
-      "name": "@nx-acme/acme-plugin",
+    "packages/util": {
+      "name": "@nx-acme/util",
       "version": "0.0.1",
       "dependencies": {
         "tslib": "^2.3.0",
@@ -73,6 +73,8 @@
       "name": "@nx-acme/zoo",
       "version": "0.0.1",
       "dependencies": {
+        "@nx-acme/animal": "workspace:*",
+        "@nx-acme/util": "workspace:*",
         "tslib": "^2.3.0",
       },
     },
@@ -576,9 +578,7 @@
 
     "@nx-acme/animal": ["@nx-acme/animal@workspace:packages/animal"],
 
-    "@nx-acme/lib1": ["@nx-acme/lib1@workspace:packages/lib1"],
-
-    "@nx-acme/ui": ["@nx-acme/ui@workspace:packages/acme-ui"],
+    "@nx-acme/util": ["@nx-acme/util@workspace:packages/util"],
 
     "@nx-acme/zoo": ["@nx-acme/zoo@workspace:packages/zoo"],
 

@@ -13,10 +13,7 @@
       "path": "./packages/nx-biome-plugin"
     },
     {
-      "path": "./packages/acme-ui"
-    },
-    {
-      "path": "./packages/lib1"
+      "path": "./packages/util"
     }
   ]
 }
