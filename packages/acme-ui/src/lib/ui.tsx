@@ -3,7 +3,7 @@ import './style.css'
 export function Ui() {
 	return (
 		<div>
-			<h1>Welcome to Ui! Star style plans ui</h1>
+			<h1>Welcome to Ui! Star style plans ui 2</h1>
 		</div>
 	)
 }
