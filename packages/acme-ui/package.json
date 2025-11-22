@@ -1,7 +1,6 @@
 {
-	"name": "@nx-acme/animal",
-	"version": "0.0.1",
-	"private": true,
+	"name": "@nx-acme/ui",
+	"version": "1.0.0",
 	"type": "module",
 	"main": "./dist/index.js",
 	"module": "./dist/index.js",
@@ -15,14 +14,15 @@
 			"default": "./dist/index.js"
 		}
 	},
-	"dependencies": {
-		"tslib": "^2.3.0",
-		"@nx-acme/util": "workspace:*"
-	},
+	"files": [
+		"dist",
+		"!**/*.tsbuildinfo"
+	],
 	"nx": {
+		"name": "ui",
 		"tags": [
-			"type:feature",
-			"scope:animal"
+			"type:ui",
+			"scope:shared"
 		]
 	}
 }
