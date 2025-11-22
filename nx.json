@@ -80,6 +80,16 @@
 		"version": {
 			"conventionalCommits": true,
 			"preVersionCommand": "bunx nx run-many -t build"
+		},
+		"conventionalCommits": {
+			"types": {
+				"style": {
+					"semverBump": "minor"
+				}
+			}
+		},
+		"changelog": {
+			"projectChangelogs": true
 		}
 	},
 	"generators": {
