@@ -76,8 +76,9 @@
 		}
 	},
 	"release": {
-		"versionPlans": true,
-		"projectsRelationship": "independent",
+		"version": {
+			"conventionalCommits": true
+		},
 		"changelog": {
 			"projectChangelogs": true,
 			"workspaceChangelog": true
