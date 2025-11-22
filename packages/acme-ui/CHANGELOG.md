@@ -1,3 +1,13 @@
+## 0.4.0 (2025-11-22)
+
+### 🚀 Features
+
+- **ui:** new icon 1 ([a246fe1](https://github.com/basantech89/nx-acme/commit/a246fe1))
+
+### ❤️ Thank You
+
+- Basant Soni
+
 ## 0.3.0 (2025-11-22)
 
 ### 🚀 Features
