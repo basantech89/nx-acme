@@ -76,7 +76,8 @@
 		}
 	},
 	"release": {
-		"versionPlans": true
+		"versionPlans": true,
+		"projectsRelationship": "independent"
 	},
 	"generators": {
 		"@nx/react": {
