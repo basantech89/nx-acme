@@ -2,6 +2,6 @@ import { animal } from './animal.js'
 
 describe('animal', () => {
 	it('should work', () => {
-		expect(animal()).toEqual('animal1')
+		expect(animal()).toEqual('animal2')
 	})
 })
