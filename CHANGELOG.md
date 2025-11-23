@@ -1,3 +1,13 @@
+## 0.5.0 (2025-11-23)
+
+### 🚀 Features!!
+
+- **ui:** change to 3 ([0365dee](https://github.com/basantech89/nx-acme/commit/0365dee))
+
+### ❤️ Thank You
+
+- Basant Soni
+
 ## 0.4.0 (2025-11-22)
 
 ### 🚀 Features
