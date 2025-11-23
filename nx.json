@@ -76,6 +76,13 @@
 		}
 	},
 	"release": {
+		"releaseTag": {
+			"requireSemver": true,
+			"pattern": "release/v{version}"
+		},
+		"git": {
+			"commitMessage": "chore(release): publish version {version} 🎉"
+		},
 		"version": {
 			"conventionalCommits": true
 		},
