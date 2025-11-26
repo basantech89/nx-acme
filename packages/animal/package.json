@@ -1,6 +1,6 @@
 {
   "name": "@nx-acme/animal",
-  "version": "0.6.0",
+  "version": "0.6.1",
   "type": "module",
   "main": "./dist/index.js",
   "module": "./dist/index.js",
@@ -15,8 +15,8 @@
     }
   },
   "dependencies": {
-    "tslib": "^2.3.0",
-    "@nx-acme/util": "workspace:*"
+    "@nx-acme/util": "workspace:*",
+    "tslib": "^2.3.0"
   },
   "nx": {
     "tags": [
