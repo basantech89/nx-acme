@@ -73,16 +73,22 @@
 			"cache": true,
 			"dependsOn": ["^build"],
 			"inputs": ["production", "^production"]
+		},
+		"nx-release-publish": {
+			"options": {
+				"packageRoot": "build/{projectRoot}"
+			}
 		}
 	},
 	"release": {
 		"releaseTag": {
 			"requireSemver": true
 		},
+		"projects": ["packages/*"],
 		"version": {
-			"conventionalCommits": true,
 			"manifestRootsToUpdate": ["build/{projectRoot}"],
 			"currentVersionResolver": "git-tag",
+			"specifierSource": "conventional-commits",
 			"versionActionsOptions": {
 				"skipLockFileUpdate": true
 			}
