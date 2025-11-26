@@ -73,32 +73,28 @@
 			"cache": true,
 			"dependsOn": ["^build"],
 			"inputs": ["production", "^production"]
-		},
-		"nx-release-publish": {
-			"options": {
-				"packageRoot": "build/{projectRoot}"
-			}
 		}
 	},
 	"release": {
+		"projectsRelationship": "independent",
 		"releaseTag": {
 			"requireSemver": true
 		},
 		"projects": ["packages/*"],
 		"version": {
-			"manifestRootsToUpdate": ["build/{projectRoot}"],
-			"currentVersionResolver": "git-tag",
-			"specifierSource": "conventional-commits",
-			"versionActionsOptions": {
-				"skipLockFileUpdate": true
-			}
+			"conventionalCommits": true,
+			"preVersionCommand": "nx run-many -t build"
+		},
+		"git": {
+			"commitMessage": "🎉 chore(release): publish version v{version}"
 		},
 		"changelog": {
-			"git": {
-				"commitMessage": "🎉 chore(release): publish version v{version}"
+			"projectChangelogs": {
+				"createRelease": "github"
 			},
-			"projectChangelogs": true,
-			"workspaceChangelog": true
+			"workspaceChangelog": {
+				"createRelease": "github"
+			}
 		}
 	},
 	"generators": {
