@@ -83,7 +83,8 @@
 		"projects": ["packages/*"],
 		"version": {
 			"conventionalCommits": true,
-			"preVersionCommand": "nx run-many -t build"
+			"preVersionCommand": "nx run-many -t build",
+			"currentVersionResolver": "registry"
 		},
 		"git": {
 			"commitMessage": "🎉 chore(release): publish version v{version}"

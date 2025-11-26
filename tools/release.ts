@@ -39,6 +39,26 @@ async function copyPackagesToBuild() {
 	}
 }
 
+async function copyChangelogFiles() {
+	const buildDir = path.join(process.cwd(), 'build')
+	const packagesDir = path.join(process.cwd(), 'packages')
+	const packageDirs = await fs.readdir(packagesDir)
+
+	for (const pkg of packageDirs) {
+		const srcChangelogPath = path.join(packagesDir, pkg, 'CHANGELOG.md')
+		const destChangelogPath = path.join(
+			buildDir,
+			'packages',
+			pkg,
+			'CHANGELOG.md',
+		)
+
+		if (await fs.pathExists(srcChangelogPath)) {
+			await fs.copy(srcChangelogPath, destChangelogPath)
+		}
+	}
+}
+
 const options = await yargs(process.argv.slice(2))
 	.version(false)
 	.option('firstRelease', {
@@ -80,11 +100,15 @@ await releaseChangelog({
 	dryRun: options.dryRun,
 })
 
+await copyChangelogFiles()
+
 const publishResult = await releasePublish({
 	releaseGraph,
 	firstRelease: options.firstRelease,
 	dryRun: options.dryRun,
 	verbose: options.verbose,
+	registry: 'https://registry.npmjs.org/',
+	access: 'public',
 })
 
 process.exit(
