@@ -77,34 +77,22 @@
 	},
 	"release": {
 		"releaseTag": {
-			"requireSemver": true,
-			"pattern": "release/v{version}"
-		},
-		"git": {
-			"commitMessage": "chore(release): publish version {version} 🎉"
+			"requireSemver": true
 		},
 		"version": {
-			"conventionalCommits": true
-		},
-		"conventionalCommits": {
-			"types": {
-				"feat": {
-					"changelog": {
-						"title": "🚀 Features!!"
-					}
-				}
+			"conventionalCommits": true,
+			"manifestRootsToUpdate": ["build/{projectRoot}"],
+			"currentVersionResolver": "git-tag",
+			"versionActionsOptions": {
+				"skipLockFileUpdate": true
 			}
 		},
 		"changelog": {
+			"git": {
+				"commitMessage": "🎉 chore(release): publish version v{version}"
+			},
 			"projectChangelogs": true,
-			"workspaceChangelog": {
-				"renderOptions": {
-					"authors": true,
-					"mapAuthorsToGithubUsernames": true,
-					"versionTitleDate": true,
-					"commitReferences": true
-				}
-			}
+			"workspaceChangelog": true
 		}
 	},
 	"generators": {
