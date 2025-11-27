@@ -1,4 +1,5 @@
 export function util(): string {
+	console.log('utils 1')
 	return 'util'
 }
 
