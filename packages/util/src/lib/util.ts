@@ -1,5 +1,5 @@
 export function util(): string {
-	return 'util'
+	return 'util2'
 }
 
 export function formatMessage(prefix: string, message: string): string {
