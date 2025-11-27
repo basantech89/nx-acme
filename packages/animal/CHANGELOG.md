@@ -1,3 +1,17 @@
+## 0.1.1 (2025-11-27)
+
+### 🚀 Features
+
+- **animal:** change to 8 ([f4c9793](https://github.com/basantech89/nx-acme/commit/f4c9793))
+
+### 🧱 Updated Dependencies
+
+- Updated @nx-acme/util to 0.1.1
+
+### ❤️ Thank You
+
+- Basant Soni
+
 ## 0.1.0 (2025-11-26)
 
 ### 🚀 Features

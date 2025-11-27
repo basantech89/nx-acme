@@ -1,3 +1,10 @@
+## 0.1.1 (2025-11-27)
+
+### 🧱 Updated Dependencies
+
+- Updated @nx-acme/animal to 0.1.1
+- Updated @nx-acme/util to 0.1.1
+
 ## 0.1.0 (2025-11-26)
 
 ### 🚀 Features

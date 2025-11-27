@@ -1,3 +1,13 @@
+## 0.2.0 (2025-11-27)
+
+### 🚀 Features
+
+- **ui:** change to 7 ([1ffcc4c](https://github.com/basantech89/nx-acme/commit/1ffcc4c))
+
+### ❤️ Thank You
+
+- Basant Soni
+
 ## 0.1.0 (2025-11-26)
 
 ### 🚀 Features
