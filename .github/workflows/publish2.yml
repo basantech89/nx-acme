@@ -1,0 +1,25 @@
+name: publish2
+
+on:
+  push:
+    branches:
+      - main
+    tags:
+      - '@.*\/.*@[0-9]+\.[0-9]+\.[0-9]+'
+        # https://regex101.com/r/QdT1jO/1
+
+permissions:
+  actions: read
+  contents: read
+
+jobs:
+  main:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          filter: tree:0
+          fetch-depth: 0
+
+      - name: run echo
+        run: echo "publish2"
