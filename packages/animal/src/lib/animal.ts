@@ -1,7 +1,7 @@
 import { getRandomItem } from '@nx-acme/util'
 
 export function animal(): string {
-	return 'animal7'
+	return 'animal8'
 }
 
 export interface Animal {
